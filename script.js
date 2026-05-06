@@ -49,6 +49,7 @@ buttons.forEach(button => {
                 console.log("do nothing");
             }
             else{
+                if(lastEntryWasEquals) resultValue = '';
                 curValue = curValue + keyValue;
                 curr.textContent = curValue;
                 lastEntryWasOperator = false;
@@ -101,7 +102,8 @@ buttons.forEach(button => {
                 curr.textContent = resultValue;
                 lastEntryWasOperator = false;
                 lastEntryWasEquals = true;
-                resultValue = '';
+                curValue = '';
+
             }
             
         }
