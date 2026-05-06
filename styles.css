@@ -7,6 +7,7 @@
     margin: auto;
     border: black 2px solid;
     margin-top: 20vh;
+    min-width: 200px;
 }
 
 #keypad{
@@ -16,6 +17,7 @@
     justify-content: space-between;
     flex: 2;
     gap: 1vh;
+    flex-wrap: wrap;
 }
 #display{
     flex: .25;
@@ -29,12 +31,12 @@
     flex: 1;
     margin: 1vh
 }
-#result{
+#current{
     font-size: large;
     font-weight: 400;
 }
 .row{
-    flex:1;
+    flex:1; 
     display: flex;
     justify-content: space-between;
     gap: 1vh;
@@ -43,4 +45,8 @@
     flex:1;
     font-size: large;
     font-weight: bold;
+}
+
+#btn-clear{
+    flex: 2.5;
 }
