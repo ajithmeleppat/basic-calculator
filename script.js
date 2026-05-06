@@ -67,14 +67,19 @@ buttons.forEach(button => {
                 operator = keyValue;
                 console.log(`first:${resultValue}`);
                 console.log(`operator:${operator}`);
+                console.log(`second:${curValue}`);
             }
             else{
-                if(resultValue === ''){
+                if( resultValue === '') {
                     resultValue = curValue;
                     operator = keyValue;
                     curValue = '';
                     console.log(`first:${resultValue}`);
                     console.log(`operator:${operator}`);
+                    console.log(`second:${curValue}`);
+                }
+                else if (lastEntryWasEquals){
+                    operator = keyValue;
                 }
                 else{
                     console.log(`first:${resultValue}`);
@@ -109,6 +114,8 @@ buttons.forEach(button => {
                 lastEntryWasOperator = false;
                 lastEntryWasEquals = true;
                 curValue = '';
+                console.log(`first:${resultValue}`);
+                console.log(`second:${curValue}`);
 
             }
             
