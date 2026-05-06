@@ -39,6 +39,7 @@ let resultValue = '';
 let operator = "";
 let lastEntryWasOperator = false;
 let lastEntryWasEquals = false;
+let decimalPoint = false;
 const buttons = document.querySelectorAll(".key");
 buttons.forEach(button => {
     button.addEventListener("click", () => {
@@ -50,10 +51,15 @@ buttons.forEach(button => {
             }
             else{
                 if(lastEntryWasEquals) resultValue = '';
+                if(keyValue === '.'){
+                    if(decimalPoint) keyValue = '';
+                    else decimalPoint = true;
+                }
                 curValue = curValue + keyValue;
                 curr.textContent = curValue;
                 lastEntryWasOperator = false;
                 lastEntryWasEquals = false;
+                if(keyValue === '.') decimalPoint = 1;
             }
         }
         else if (operators.includes(keyValue)){
