@@ -101,6 +101,7 @@ buttons.forEach(button => {
                 curr.textContent = resultValue;
                 lastEntryWasOperator = false;
                 lastEntryWasEquals = true;
+                resultValue = '';
             }
             
         }
